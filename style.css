@@ -8,9 +8,11 @@ body{
     align-items: center;
     background-color: rgb(250, 243, 230);
     font-family: "Roboto Mono", cursive;
-   
 }
+h1,h2,h3,h4,h5,h6{
+    font-weight: 300;
 
+}
 main{
    
     width:70%;
@@ -21,23 +23,50 @@ main{
     align-items: center;
     text-align: center;
 }
-main h1,main h3{
-    font-weight: 300;
-   
+.carousel{
+
+    width:100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
 }
+.carousel-inner{
+
+    width:100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+.carousel-item{
+    width:100%;
+    height: 100%;
+
+    padding: 0%;
+    margin: 0%;
+}
+.homePage{
+    height: 100%;
+    width:100%;
+   display: flex;
+   flex-direction: column;
+    justify-content: space-around;
+}
+
 .category{
-    width: 100%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+   margin: auto;
+   margin-top: 0%;
+   margin-bottom: 0px;
 }
 .category-div{
     width:30%;
-    height: 50%;
-    margin: 10px;
-    padding-bottom: 25px;
+    height: 30%;
+  
     opacity: 0.4;
     transition: all 1.5s;
     
@@ -48,29 +77,29 @@ main h1,main h3{
     border:0.5px solid black;
     box-shadow: 5px 5px 2px rgb(195, 193, 193);
 }
-#Linux{
+/* #Linux{
     background-image: url("https://wallpapercave.com/wp/1OXs33V.jpg");
     background-size:cover;
     background-repeat: no-repeat;
   
-}
+} */
 
-#Bash{
+/* #Bash{
     background-image: url("https://c4.wallpaperflare.com/wallpaper/396/50/367/linux-command-lines-unix-bash-grey-hd-wallpaper-preview.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-}
-#Docker{
+} */
+/* #Docker{
     background-image: url("https://c4.wallpaperflare.com/wallpaper/414/284/24/docker-containers-brand-wallpaper-preview.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-}
-#SQL{
+} */
+/* #SQL{
     background-image: url("https://static.vecteezy.com/system/resources/previews/012/614/985/large_2x/hand-showing-sql-word-and-sql-structured-query-language-code-with-server-room-background-photo.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-}
-#code{
+/* } */
+/* #code{
     background-image: url("https://static.vecteezy.com/system/resources/previews/013/947/325/original/programming-language-word-concepts-blue-banner-computer-commands-infographics-with-icons-on-color-background-isolated-typography-illustration-with-text-vector.jpg");
     background-size:cover;
     background-repeat: no-repeat;
@@ -80,12 +109,13 @@ main h1,main h3{
     background-size:cover;
     background-repeat: no-repeat;
 }
-
+ */ 
 
 /* Difficulty Page */
 .difficulty{
     width: 80%;
     height: 80%;
+    margin: auto;
 }
 .difficulty-levels{
     display: flex;
@@ -126,4 +156,3 @@ main h1,main h3{
     color: rgb(104, 2, 2);
     border: solid red;
 }
-
