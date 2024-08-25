@@ -1,0 +1,81 @@
+body{
+    margin:0;
+    padding: 0;
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 243, 230);
+}
+
+main{
+   
+    width:70%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main h1,main h3{
+    font-weight: 300;
+    font-family: "Roboto Mono";
+}
+.category{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.category-div{
+    width:30%;
+    height: 50%;
+    margin: 10px;
+    padding-bottom: 25px;
+    opacity: 0.4;
+    transition: all 1.5s;
+    
+}
+.category-div:hover{
+    opacity: 1;
+    cursor: pointer;
+    border:0.5px solid black;
+    box-shadow: 5px 5px 2px rgb(195, 193, 193);
+}
+#Linux{
+    background-image: url("https://wallpapercave.com/wp/1OXs33V.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+  
+}
+
+#Bash{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/396/50/367/linux-command-lines-unix-bash-grey-hd-wallpaper-preview.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+#Docker{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/414/284/24/docker-containers-brand-wallpaper-preview.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+#SQL{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/012/614/985/large_2x/hand-showing-sql-word-and-sql-structured-query-language-code-with-server-room-background-photo.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+#code{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/013/947/325/original/programming-language-word-concepts-blue-banner-computer-commands-infographics-with-icons-on-color-background-isolated-typography-illustration-with-text-vector.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+#devops{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/008/902/912/non_2x/devops-banner-concept-has-8-steps-to-analyze-such-as-plan-code-build-operate-deploy-test-monitor-and-release-for-software-development-and-information-technology-operations-infographic-vector.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
