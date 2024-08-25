@@ -7,6 +7,8 @@ body{
     justify-content: center;
     align-items: center;
     background-color: rgb(250, 243, 230);
+    font-family: "Roboto Mono", cursive;
+   
 }
 
 main{
@@ -21,7 +23,7 @@ main{
 }
 main h1,main h3{
     font-weight: 300;
-    font-family: "Roboto Mono";
+   
 }
 .category{
     width: 100%;
@@ -77,5 +79,51 @@ main h1,main h3{
     background-image: url("https://static.vecteezy.com/system/resources/previews/008/902/912/non_2x/devops-banner-concept-has-8-steps-to-analyze-such-as-plan-code-build-operate-deploy-test-monitor-and-release-for-software-development-and-information-technology-operations-infographic-vector.jpg");
     background-size:cover;
     background-repeat: no-repeat;
+}
+
+
+/* Difficulty Page */
+.difficulty{
+    width: 80%;
+    height: 80%;
+}
+.difficulty-levels{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    height: 80%;
+    text-align: center;
+}
+.level{
+    width:30%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black;
+    opacity: 0.33;
+    transition: all 1.5s;
+}
+.level:hover{
+    opacity: 1;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#easy{
+    background-color: rgb(156, 211, 156);
+    color: rgb(2, 71, 2);
+    border: solid green;
+}
+#medium{
+    background-color: rgb(252, 198, 98);
+    color: rgb(149, 97, 1);
+    border: solid orange;
+}
+#hard{
+    background-color: rgb(254, 135, 135);
+    color: rgb(104, 2, 2);
+    border: solid red;
 }
 
