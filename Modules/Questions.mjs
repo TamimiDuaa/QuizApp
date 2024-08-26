@@ -1,10 +1,10 @@
 // let userAnswers=[];
-let score =0;
 export async function createQuestions(questions){
-    
+    let score =0;
+
     const carouselInner=document.querySelector(".carousel-inner");
     for(let j=0;j<questions.length;j++){
-
+        console.log(score);
         let carouselItem = document.createElement("div");
         carouselItem.classList.add("carousel-item");
         if(j===0){
@@ -13,12 +13,23 @@ export async function createQuestions(questions){
         }
         carouselInner.appendChild(carouselItem);
 
+        let quizInfo = document.createElement("div");
+        quizInfo.classList.add("quiz-info");
+
         let quizCount =document.createElement("span")
         quizCount.classList.add("count")
         quizCount.innerHTML = `${j+1}/${questions.length}`;
-        carouselItem.appendChild(quizCount);
+        quizInfo.appendChild(quizCount);
 
-        let questionText = document.createElement("h4");
+        
+        let scoreText =document.createElement("span")
+        scoreText.classList.add("score")
+        scoreText.innerHTML = `your Score = ${score}`;
+
+        quizInfo.appendChild(scoreText);
+
+        carouselItem.appendChild(quizInfo);
+        let questionText = document.createElement("label");
         questionText.innerHTML = questions[j].question;
         questionText.classList.add("question");
         console.log( questions[j].question);
@@ -35,13 +46,18 @@ export async function createQuestions(questions){
             console.log("hello " + correctAnswer);
             if (correctAnswer === "true") {
                 choiceDiv.style.backgroundColor = "rgb(156, 211, 156)"; 
-                score ++;
+                score+=1;
+                scoreText.innerHTML = `your Score = ${score}`;
+
                 console.log("correct");
             } else {
                 choiceDiv.style.backgroundColor = "rgb(254, 135, 135)"; 
-                score--;
+                score-=1;
+                scoreText.innerHTML = `your Score = ${score}`;
+
                 console.log("not correct");
             }
+            scoreText.innerHTML = `Your Score = ${score}`;
         }
 
         for(let i=0;i<result.length;i++){
@@ -74,7 +90,6 @@ export async function createQuestions(questions){
             }
         }
 
-       
         // Create the Next button
         const nextButton = document.createElement('button');
         nextButton.id = 'nextQuestion';
@@ -83,7 +98,8 @@ export async function createQuestions(questions){
         nextButton.textContent = 'Next';
 
        
-        nextButton.addEventListener("click",(event)=>{
+        nextButton.addEventListener("click",()=>{
+
             for (let i = 0; i < result.length; i++) {
 
                 if (result[i][1] != null) {
@@ -104,11 +120,36 @@ export async function createQuestions(questions){
         
         const finishQuiz = document.createElement('button');
         finishQuiz.id = 'finish';
-        finishQuiz.setAttribute('data-bs-target', '#carouselExample');
-        finishQuiz.setAttribute('data-bs-slide', 'next');
+        
         finishQuiz.textContent = 'Finish Quiz';
        
+        finishQuiz.addEventListener("click",()=>{
+            let lastDiv = document.createElement("div");
+            lastDiv.classList.add("carousel-item");
+            lastDiv.classList.add("active");
+            console.log("hello");
+            carouselInner.appendChild(lastDiv);
 
+            let scoreHeader = document.createElement("h1");
+            scoreHeader.innerHTML = `Your Score is ${score}`;
+
+            lastDiv.appendChild(scoreHeader);
+            if(score > questions.length/2){
+                let winImg = document.createElement("img");
+                winImg.src="https://i.pinimg.com/originals/de/38/61/de386180de84192a63b1c6186bd6e46c.gif";
+                lastDiv.appendChild(winImg);
+
+            }
+            else{
+                //
+                let loseImg = document.createElement("img");
+                loseImg.src="https://cdn.pixabay.com/animation/2023/11/23/04/15/04-15-08-729_512.gif";
+                lastDiv.appendChild(loseImg);
+            }
+            finishQuiz.setAttribute('data-bs-target', '#carouselExample');
+            finishQuiz.setAttribute('data-bs-slide', 'next');
+        })
+      
         carouselItem.appendChild(multipleChoicesDiv);
         if(j!=questions.length-1)
             carouselItem.appendChild(nextButton);

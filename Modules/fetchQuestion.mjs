@@ -18,7 +18,7 @@ document.querySelectorAll(".level").forEach((element)=>{
 })
 
 export async function getQuestions(category, difficulty) {
-    let url = `https://quizapi.io/api/v1/questions?apiKey=${apiKEY}&category=${category.toLowerCase()}&difficulty=${difficulty.toLowerCase()}&limit=20`
+    let url = `https://quizapi.io/api/v1/questions?apiKey=${apiKEY}&category=${category.toLowerCase()}&difficulty=${difficulty.toLowerCase()}&limit=6`
     try {
         const response = await fetch(url);
         const data = await response.json();
