@@ -192,6 +192,13 @@ button:hover{
     border: 0.5px solid black;
     border-radius: 8px;
     text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+label{
+    font-size: 14px;
+    font-weight: 300;
 }
 .multiple-choices{
     text-align: left;
@@ -233,4 +240,11 @@ label:hover{
     float: left;
     margin-top: 20px;
     border-radius: 100% 0% 0% 100%;
+}
+#finish{
+    background-color: cadetblue;
+    border:solid rgb(33, 87, 89);
+    float: right;
+    margin-top: 20px;
+    border-radius: 0px 100% 100% 0px;
 }
